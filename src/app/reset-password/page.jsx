@@ -1,8 +1,9 @@
 "use client";
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export const dynamic = "force-dynamic";
 
 export default function ResetPasswordPage() {
   const router = useRouter();

@@ -90,6 +90,7 @@ export default function ResetPasswordPage() {
         }}>Reset Password</div>
 
         <form style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }} onSubmit={handleSubmit}>
+
           {/* New Password */}
           <div style={{ position: "relative" }}>
             <input
@@ -134,20 +135,17 @@ export default function ResetPasswordPage() {
                 background: "transparent",
                 border: "none",
                 padding: "6px",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center"
+                cursor: "pointer"
               }}
             >
               {showPassword ? (
                 <svg width="18" height="18" fill="none" stroke="#374151" strokeWidth="1.6" viewBox="0 0 24 24">
-                  <path d="M3 3l18 18M10.58 10.58A3 3 0 0113.42 13.42M21 12s-3.5-7-9-7a9.77 9.77 0 00-6 2.2"/>
+                  <path d="M3 3l18 18M10.58 10.58A3 3 0 01113.42 13.42M21 12s-3.5-7-9-7a9.77 9.77 0 00-6 2.2" />
                 </svg>
               ) : (
                 <svg width="18" height="18" fill="none" stroke="#374151" strokeWidth="1.6" viewBox="0 0 24 24">
-                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
-                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+                  <circle cx="12" cy="12" r="3" />
                 </svg>
               )}
             </button>
@@ -200,22 +198,10 @@ export default function ResetPasswordPage() {
               cursor: "pointer",
               fontWeight: "700",
               fontSize: "1rem",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
               opacity: loading ? 0.85 : 1
             }}
           >
-            {loading ? (
-              <div style={{
-                width: 18,
-                height: 18,
-                border: "3px solid white",
-                borderTop: "3px solid #003b8c",
-                borderRadius: "50%",
-                animation: "spin 0.8s linear infinite"
-              }} />
-            ) : "Reset Password"}
+            {loading ? "Loading..." : "Reset Password"}
           </button>
         </form>
 
@@ -229,10 +215,6 @@ export default function ResetPasswordPage() {
             {message}
           </div>
         )}
-
-        <style>{`
-          @keyframes spin { to { transform: rotate(360deg); } }
-        `}</style>
       </div>
     </div>
   );

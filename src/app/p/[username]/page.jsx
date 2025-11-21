@@ -6,11 +6,9 @@ import Navbar from "@/components/Navbar";
 async function fetchPortfolio(username) {
   if (!username) return null;
   try {
-const base =
-  process.env.NEXT_PUBLIC_BASE_URL?.trim() ||
-  process.env.VERCEL_URL?.trim()
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
+    const base =
+      process.env.NEXT_PUBLIC_BASE_URL?.trim() ||
+      `http://localhost:${process.env.PORT || 3000}`;
 
     const url = `${base}/api/portfolio/public/${encodeURIComponent(
       username.toLowerCase()

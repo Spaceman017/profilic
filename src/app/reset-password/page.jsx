@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";  // Added Suspense here
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function ResetPasswordPage() {
+// This is your original page code, but now it's inside a function called ResetPasswordContent
+function ResetPasswordContent() {
   const router = useRouter();
   const params = useSearchParams();
 
@@ -249,5 +250,14 @@ export default function ResetPasswordPage() {
         </div>
       </div>
     </>
+  );
+}
+
+// This is the NEW main part: It wraps ResetPasswordContent in Suspense to fix the build error
+export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={<div style={{ minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>Loading...</div>}>
+      <ResetPasswordContent />
+    </Suspense>
   );
 }

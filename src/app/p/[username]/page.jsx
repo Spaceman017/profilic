@@ -1,4 +1,5 @@
 // src/app/p/[username]/page.jsx
+import Projects from "@/components/Projects";
 export const dynamic = "force-dynamic";
 import Navbar from "@/components/Navbar";
 
@@ -253,55 +254,15 @@ if (contact.facebook) contactItems.push({ key: "facebook", href: contact.faceboo
       </svg>
 
       {/* PROJECTS */}
-      <section id="projects" style={{ background: "#fff" }}>
-        <div className="container">
-          <h2 style={{ color: "#0047ab", textAlign: "center", fontSize: "2rem", marginBottom: 16 }}>Projects</h2>
+<section id="projects" style={{ background: "#fff" }}>
+  <div className="container">
+    <h2 style={{ color: "#0047ab", textAlign: "center", fontSize: "2rem", marginBottom: 16 }}>
+      Projects
+    </h2>
 
-          <div className="projects-grid">
-            {Array.isArray(projects) && projects.length > 0 ? (
-              projects.map((p, i) => {
-                const descNodes = typeof p.info === "string" ? linkifyText(p.info) : p.info;
-                const projectLink = p.link || (typeof p.info === "string" && (p.info.match(/((https?:\/\/)|(www\.))[^\s/$.?#].[^\s]*/i) || [])[0]) || "";
-
-                return (
-                  <article className="project-card" key={i}>
-                    {p.image ? (
-                      <img className="project-image" src={p.image} alt={p.name || `project-${i}`} />
-                    ) : (
-                      <div style={{ height: 180, background: "#e6eefc" }} />
-                    )}
-
-                    <div className="project-body">
-                      <h3 className="project-title">{p.name || "Untitled Project"}</h3>
-                      <p className="project-desc">{descNodes}</p>
-
-                      <div style={{ display: "flex", gap: 8, marginTop: 12, alignItems: "center" }}>
-                        {projectLink ? (
-                          <a href={projectLink.startsWith("http") ? projectLink : `https://${projectLink}`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                            <button style={{ padding: "8px 12px", borderRadius: 8, background: "#0047ab", color: "#fff", border: "none" }}>
-                              View
-                            </button>
-                          </a>
-                        ) : null}
-
-                        {p.github && (
-                          <a href={p.github.startsWith("http") ? p.github : `https://${p.github}`} target="_blank" rel="noopener noreferrer">
-                            <div style={{ display: "inline-flex", gap: 8, alignItems: "center" }}>
-                              <Icon name="github" />
-                            </div>
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </article>
-                );
-              })
-            ) : (
-              <p style={{ color: "#666", textAlign: "center" }}>No projects yet.</p>
-            )}
-          </div>
-        </div>
-      </section>
+    <Projects projects={projects} />
+  </div>
+</section>
 
       {/* wave */}
       <svg className="wave" viewBox="0 0 1440 80" preserveAspectRatio="none">

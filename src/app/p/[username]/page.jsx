@@ -6,15 +6,9 @@ import Navbar from "@/components/Navbar";
 async function fetchPortfolio(username) {
   if (!username) return null;
   try {
-    const base =
-      process.env.NEXT_PUBLIC_BASE_URL?.trim() ||
-      `http://localhost:${process.env.PORT || 3000}`;
-
-    const url = `${base}/api/portfolio/public/${encodeURIComponent(
-      username.toLowerCase()
-    )}`;
-
-    const res = await fetch(url, { cache: "no-store" });
+const res = await fetch(`/api/portfolio/public/${encodeURIComponent(username.toLowerCase())}`, {
+  cache: "no-store"
+});
     if (!res.ok) return null;
     return await res.json();
   } catch (err) {

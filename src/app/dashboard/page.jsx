@@ -333,14 +333,23 @@ const contactBg  = "linear-gradient(135deg, #92a8a2ff 0%, #2a4672ff 100%)"; // r
           <div style={{ background: "white", padding: "2rem", borderRadius: 12, width: "400px", textAlign: "center" }}>
             <h3 style={{ fontSize: "1.5rem", color: "#0047ab" }}>Portfolio Generated!</h3>
             <p style={{ margin: "1rem 0" }}>Your portfolio is live at:</p>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", background: "#f0f0f0", padding: "0.5rem 1rem", borderRadius: 8 }}>
-              <span style={{ wordBreak: "break-all" }}>{generatedLink}</span>
-              <button onClick={handleCopyLink} style={{ marginLeft: 8, background: "#0047ab", color: "white", border: "none", padding: "4px 8px", borderRadius: 6, cursor: "pointer", transition: "0.2s", transform: "scale(1)" }}
-                onMouseDown={(e) => e.currentTarget.style.transform = "scale(0.9)"}
-                onMouseUp={(e) => e.currentTarget.style.transform = "scale(1)"}
-                onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
-              >Copy</button>
-            </div>
+<div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", background: "#f0f0f0", padding: "0.5rem 1rem", borderRadius: 8 }}>
+  <a 
+    href={generatedLink} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    style={{ wordBreak: "break-all", color: "#0047ab", textDecoration: "underline" }}
+  >
+    {generatedLink}
+  </a>
+  <button onClick={handleCopyLink} style={{ marginLeft: 8, background: "#0047ab", color: "white", border: "none", padding: "4px 8px", borderRadius: 6, cursor: "pointer", transition: "0.2s", transform: "scale(1)" }}
+    onMouseDown={(e) => e.currentTarget.style.transform = "scale(0.9)"}
+    onMouseUp={(e) => e.currentTarget.style.transform = "scale(1)"}
+    onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+  >
+    Copy
+  </button>
+</div>
             <button onClick={handleDownloadPortfolio} style={{ marginTop: "1rem", background: "#0047ab", color: "white", border: "none", padding: "0.5rem 1rem", borderRadius: 8, cursor: "pointer", transition: "0.2s", transform: "scale(1)" }}
               onMouseDown={(e) => e.currentTarget.style.transform = "scale(0.9)"}
               onMouseUp={(e) => e.currentTarget.style.transform = "scale(1)"}

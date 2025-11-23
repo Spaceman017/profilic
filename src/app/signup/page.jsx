@@ -323,8 +323,8 @@ export default function SignupPage() {
                 required
               />
               <label className="input-label">Confirm Password</label>
-<button type="button" aria-label={showPassword ? "Hide password" : "Show password"} onClick={() => setShowPassword((s) => !s)} className="icon-btn" title={showPassword ? "Hide" : "Show"}>
-                {showPassword ? (
+<button type="button" aria-label={showConfirm ? "Hide password" : "Show password"} onClick={() => setShowConfirm((s) => !s)} className="icon-btn" title={showConfirm ? "Hide" : "Show"}>
+                {showConfirm ? (
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 3l18 18" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M10.58 10.58A3 3 0 0113.42 13.42" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>

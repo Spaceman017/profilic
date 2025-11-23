@@ -297,12 +297,19 @@ export default function SignupPage() {
                 required
               />
               <label className="input-label">Password</label>
-              <button
-                type="button"
-                onClick={() => setShowPassword((s) => !s)}
-                className="icon-btn"
-              >
-                {/* Password visibility icons here */}
+<button type="button" aria-label={showPassword ? "Hide password" : "Show password"} onClick={() => setShowPassword((s) => !s)} className="icon-btn" title={showPassword ? "Hide" : "Show"}>
+                {showPassword ? (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3l18 18" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M10.58 10.58A3 3 0 0113.42 13.42" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M21 12s-3.5-7-9-7a9.77 9.77 0 00-6 2.2" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ) : (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="12" cy="12" r="3" stroke="#374151" strokeWidth="1.6"/>
+                  </svg>
+                )}
               </button>
             </div>
 
@@ -316,12 +323,19 @@ export default function SignupPage() {
                 required
               />
               <label className="input-label">Confirm Password</label>
-              <button
-                type="button"
-                onClick={() => setShowConfirm((s) => !s)}
-                className="icon-btn"
-              >
-                {/* Confirm password icons here */}
+<button type="button" aria-label={showPassword ? "Hide password" : "Show password"} onClick={() => setShowPassword((s) => !s)} className="icon-btn" title={showPassword ? "Hide" : "Show"}>
+                {showPassword ? (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3l18 18" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M10.58 10.58A3 3 0 0113.42 13.42" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M21 12s-3.5-7-9-7a9.77 9.77 0 00-6 2.2" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                ) : (
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" stroke="#374151" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="12" cy="12" r="3" stroke="#374151" strokeWidth="1.6"/>
+                  </svg>
+                )}
               </button>
             </div>
 

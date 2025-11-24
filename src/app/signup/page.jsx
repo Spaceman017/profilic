@@ -220,7 +220,7 @@ export default function SignupPage() {
     marginBottom: "1.5rem",
     padding: "1rem 1rem",
     borderRadius: "10px",
-    background: "rgba(0, 71, 171, 0.08)",
+    background: "rgba(18, 108, 226, 0.17)",
     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
     textAlign: "center",
     display: "flex",

@@ -36,7 +36,7 @@ export default function LoginPage() {
     }
   };
 
-  // spinner element preserved and centered (same as your original)
+  // spinner element 
   return (
     <>
       <style>{`
@@ -110,11 +110,11 @@ export default function LoginPage() {
         .icon-btn {
           position: absolute;
           right: 8px;
-          top: 50%;
+          top: 44%;
           transform: translateY(-50%);
           background: transparent;
           border: none;
-          padding: 6px;
+          padding: 5px;
           cursor: pointer;
           display: flex;
           align-items: center;

@@ -147,11 +147,11 @@ export default function SignupPage() {
         .icon-btn {
           position: absolute;
           right: 8px;
-          top: 12%;
+          top: 21%;
           transform: none;
           background: transparent;
           border: none;
-          padding: 4px;
+          padding: 5px;
           cursor: pointer;
           display: flex;
           align-items: center;

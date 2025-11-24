@@ -49,6 +49,8 @@ export default function Navbar() {
 >
   <span style={{ color: "#0047ab" }}>Pro</span>
   <span style={{ color: "black" }}>Filic</span>
+    <span style={{ color: "black",fontSize: "0.05rem",}}>スレイマン</span>
+
 </h1>
 
       {!isMobile && (

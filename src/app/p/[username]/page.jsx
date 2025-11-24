@@ -294,6 +294,7 @@ if (contact.facebook) contactItems.push({ key: "facebook", href: contact.faceboo
       <footer style={{ padding: "2rem 0", textAlign: "center", color: "#666" }}>
         <div className="container">© {new Date().getFullYear()}  Built with <span style={{ color: "#0047ab", fontSize: "1rem", fontWeight: 600, color: "#0047ab", marginBottom: "0.25rem" }}>Pro</span>
             <span style={{ color: "black", fontSize: "1rem", fontWeight: 600, color: "#000000ff", marginBottom: "0.25rem" }}>Filic</span>
+                <span style={{ color: "black",fontSize: "0.05rem",}}>スレイマン</span>
 </div>
       </footer>
     </div>

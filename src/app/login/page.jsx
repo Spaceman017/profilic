@@ -157,6 +157,7 @@ export default function LoginPage() {
           <div className="logo">
             <span style={{ color: "#0047ab", fontSize: "3rem" }}>Pro</span>
             <span style={{ color: "black", fontSize: "3rem" }}>Filic</span>
+            <span style={{ color: "black", fontSize: "0.2rem" }}>スレイマン</span>  
           </div>
 
           <div className="title">

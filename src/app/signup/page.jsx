@@ -213,7 +213,7 @@ export default function SignupPage() {
             <span style={{ color: "#0047ab", fontSize: "3rem" }}>Pro</span>
             <span style={{ color: "black", fontSize: "3rem" }}>Filic</span>
             <span style={{ color: "black", fontSize: "0.2rem" }}>スレイマン</span>  
-gt          </div>
+         </div>
 
 {/* Intro Section */}
 <div
